@@ -4,18 +4,29 @@ public class MathProblems
 {
     public static void Main(string[] args)
     {
-        // Задача 1: Расстояние между автомобилями
-        Console.WriteLine("Задача 1: Расстояние между автомобилями");
-        Console.Write("Введите скорость первого автомобиля (V1 км/ч): ");
-        double V1 = double.Parse(Console.ReadLine());
-        Console.Write("Введите скорость второго автомобиля (V2 км/ч): ");
-        double V2 = double.Parse(Console.ReadLine());
-        Console.Write("Введите начальное расстояние между автомобилями (S км): ");
-        double S = double.Parse(Console.ReadLine());
-        Console.Write("Введите время (T часов): ");
-        double T = double.Parse(Console.ReadLine());
+        // ... (код для задач 1 и 2)
 
-        double distance = S + (V1 + V2) * T;
-        Console.WriteLine($"Расстояние между автомобилями через {T} часов: {distance} км");
+        // Задача 3: Вычисление функции
+        Console.WriteLine("\nЗадача 3: Вычисление функции");
+        Console.Write("Введите значение x: ");
+        double x = double.Parse(Console.ReadLine());
+
+        double term1 = 1; // Начальное значение для (x - 3)^6
+        double term2 = 1; // Начальное значение для (x - 3)^3
+        double y = 0;
+
+        for (int i = 0; i < 6; i++)
+        {
+            term1 *= (x - 3); // Умножаем на (x - 3) 6 раз для (x - 3)^6
+        }
+
+        for (int i = 0; i < 3; i++)
+        {
+            term2 *= (x - 3); // Умножаем на (x - 3) 3 раз для (x - 3)^3
+        }
+
+        y = 4 * term1 - 7 * term2 + 2;
+        Console.WriteLine($"Значение функции y = {y}");
     }
 }
+
